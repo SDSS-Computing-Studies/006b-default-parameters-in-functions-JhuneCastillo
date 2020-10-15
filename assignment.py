@@ -15,22 +15,53 @@ def factorPair(number, factor):
     factors = number/factor
     answer =[int(factor), int(factors)]
     answer.sort()
-    return answer
-    
-    
+    return answer   
 
 
-def cosineLaw():
-    pass
+
+def cosineLaw(side1, side2, angle, oppositeSide=True):
+    import math
+    x = toRadians(angle)
+    if oppositeSide == True:
+        answer1 = math.sqrt(side1**2 + side2**2 - 2*side1*side2*math.cos(x))
+        return answer1
+    elif oppositeSide == False:
+        if side1 > side2:
+            s = side2
+        else:
+            s = side1
+        a = 1
+        b = -2*s*math.cos(x)
+        c = side2**2 - side1**2
+        list1 = quadratic(a, b, c)
+        answer2 = solution(list1)
+        return answer2
 
 
-def convertAngle():
-    pass
+def toRadians(angle):
+    import math
+    radianAngle = angle*(math.pi/180)
+    x = float(radianAngle)
+    return x
 
 
-def solution():
-    pass
+def quadratic(a, b, c):
+    import math
+    x1 = (-b + math.sqrt(b**2 - 4*a*c))/(2*a)
+    x2 = (-b - math.sqrt(b**2 - 4*a*c))/(2*a)
+    answers = [x1, x2]
+    answers.sort()
+    return answers
 
 
-def quadratic():
-    pass
+def solution(a):
+    z = a[1]
+    return z
+
+
+
+
+
+
+
+     
