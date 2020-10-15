@@ -23,8 +23,8 @@ def cosineLaw(side1, side2, angle, oppositeSide=True):
     import math
     x = toRadians(angle)
     if oppositeSide == True:
-        answer1 = math.sqrt(side1**2 + side2**2 - 2*side1*side2*math.cos(x))
-        return answer1
+        answers1 = math.sqrt(side1**2 + side2**2 - 2*side1*side2*math.cos(x))
+        return answers1
     elif oppositeSide == False:
         if side1 > side2:
             s = side2
@@ -34,8 +34,8 @@ def cosineLaw(side1, side2, angle, oppositeSide=True):
         b = -2*s*math.cos(x)
         c = side2**2 - side1**2
         list1 = quadratic(a, b, c)
-        answer2 = solution(list1)
-        return answer2
+        answers2 = solution(list1)
+        return answers2
 
 
 def toRadians(angle):
