@@ -55,8 +55,8 @@ def quadratic(a, b, c):
 
 
 def solution(a):
-    z = a[1]
-    return z
+    y = a[1]
+    return y
 
 
 
