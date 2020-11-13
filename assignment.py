@@ -1,4 +1,4 @@
-#! python3
+#!python3
 
 import math
 
@@ -13,10 +13,9 @@ def tempConversion(degrees, unit="C"):
 
 def factorPair(number, factor):
     factors = number/factor
-    answer =[int(factor), int(factors)]
+    answer = [int(factor), int(factors)]
     answer.sort()
-    return answer   
-
+    return answer
 
 
 def cosineLaw(side1, side2, angle, oppositeSide=True):
@@ -57,11 +56,3 @@ def quadratic(a, b, c):
 def solution(a):
     y = a[1]
     return y
-
-
-
-
-
-
-
-     
